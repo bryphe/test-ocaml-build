@@ -7,4 +7,4 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 steps:
-  - script: build.bat
+  - script: call build.bat
