@@ -7,7 +7,4 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 steps:
-  - script: git clone https://github.com/esy-ocaml/ocaml C:/ocaml
-  - script: cd C:/ocaml && git checkout 4.6.0+esy
-  - script: npm install -g esy-bash@0.1.20
-  - script: cd C:/ocaml && esy-bash ./esy-configure -no-cfi -prefix C:/ocaml-prefix
+  - script: build.bat
