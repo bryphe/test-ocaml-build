@@ -12,4 +12,5 @@ steps:
   - script: call build.bat
   - script: crlf --set=LF ocaml/esy-configure
   - script: crlf --set=LF ocaml/esy-build
+  - script: crlf --set=LF ocaml/configure-windows
   - script: call build2.bat
