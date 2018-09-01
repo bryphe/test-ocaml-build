@@ -6,15 +6,15 @@ image: Visual Studio 2017
 install:
     # The x64 is required as a workaround for esy/esy#412
     - ps: Install-Product node 8 x64
-    - npm install -g esy-bash@0.1.20
-    - esy-bash cygcheck -c
-    - cmd: esy-bash mkdir -p /cygdrive/c/projects/ocaml-prefix
+    - npm install -g esy-bash@0.1.22
+    - cp cygwin1.dll C:/Users/appveyor/AppData/Roaming/npm/node_modules/esy/node_modules/esy-bash/.cygwin/bin/cygwin1.dll
+    - esy-bash mkdir -p /cygdrive/c/projects/ocaml-prefix
     - git clone https://github.com/esy-ocaml/ocaml
     - cd ocaml
     - git checkout 4.6.0+esy
 
 build_script:
-    - cmd: esy-bash ./esy-configure -no-cfi -prefix C:/projects/ocaml-prefix
-    - cmd: esy-bash ./esy-build
+    - esy-bash ./esy-configure -no-cfi -prefix C:/projects/ocaml-prefix
+    - esy-bash ./esy-build
 
 test: off
