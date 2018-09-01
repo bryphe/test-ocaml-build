@@ -1,6 +1,8 @@
 platform:
     - x64
 
+image: Visual Studio 2017
+
 install:
     # The x64 is required as a workaround for esy/esy#412
     - ps: Install-Product node 8 x64
