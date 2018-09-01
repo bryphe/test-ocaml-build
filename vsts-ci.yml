@@ -10,3 +10,4 @@ steps:
   - script: call prep.bat
   - script: call prep2.bat
   - script: call build.bat
+  - script: call build2.bat
